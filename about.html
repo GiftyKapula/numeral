@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&family=Text+Me+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link href="https://fonts.googleapis.com/css2?family=Text+Me+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script defer src="script.js"></script>
+    <title>About Us</title>
+     
+</head>
+<style> 
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+.navbar {
+    font-family: 'Text Me One', sans-serif;
+    background-color: rgb(8, 8, 8);
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    padding-top: 10px;  
+    width: 1500px;       
+}
+.navdiv {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+ 
+.logo a {
+    font-size: 25px;
+    font-weight: lighter;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin-left: 0;
+    
+}
+.logo a:hover {
+    background-color: #ffffff;
+    border-radius: 10px;
+    color: rgb(7, 7, 7);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-size: 25px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    margin-right: ;
+}
+
+li {
+    margin-right: 20px;
+}
+
+li:last-child {
+    margin-right: 0;
+}
+
+li a {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: lighter;
+    text-decoration: none;
+     
+     
+}
+.navdiv a:hover {
+    background-color: #ffffff;
+    border-radius: 10px;
+    font-size: 15px;
+    color: rgb(8, 8, 8);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.sideba{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    z-index: 999;
+    background-color: rgb(253, 253, 253);
+    backdrop-filter: blur(5px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.5);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    
+}
+.sideba li{
+    width: 100%;
+    margin: 20px;   
+
+}
+.sideba a{
+    width: 100%;
+    font-size: 30px;
+    color: #050505;
+}
+.menu-button{
+    display: none;
+}
+.fir-section {
+    position: relative;    
+    min-height: 100PX;
+    background: #fdfcfd;
+    margin-bottom: 30px; 
+    margin-left: 50px;
+}
+.blob {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: #fffeff;
+    margin-top: 100px;
+     
+}
+.text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+
+}
+.text-container p{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fcfafa;
+     
+}
+
+.sec-section{
+    margin-bottom: 10%;
+}
+.sec-section p{
+    width: 85%;
+    margin-left: 100px;
+    font-family: Arial;
+    font-size: 15px;
+    font-family: 'Quicksand', sans-serif;
+}
+.wholesome-b{
+    background: #f0eded;
+    width: 85%;
+    margin-left: 95px;
+}
+
+.section-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+
+}
+
+.card {
+    text-align: center;
+    height: 170px;
+    width: 240px;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    background-color: #fcfbfb;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10%;
+
+}
+
+.card img {
+    width: 50%;
+    border-radius: 50%;
+    height: 80px;
+}
+
+.card h3 {
+    margin: 10px 0 5px 0;
+    font-family: Arial ;
+}
+
+.card p {
+    color: #777;
+    margin: 5px 0;
+    font-family: Arial ;
+    font-size: 15px;
+}
+.emplo {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 90px; /* Adjust the height as needed */
+    width: 98%;
+    background-color: #ffffff;
+    margin-bottom: 60px; /* ????*/
+    margin-left: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    
+     
+}
+
+.emplo img {
+    height: 100%; /* Set the height to 100% */
+    border-radius: 50%;
+    object-fit: cover; /* Maintain the aspect ratio and cover the container */
+}
+
+.emplo p {
+    color: #0a0a0a;
+    font-weight: 300;
+    font-family: Arial;
+    font-size: 13px;
+}
+
+
+.section-heading {
+    padding-top: 20px;
+    font-size: 24px;
+    font-weight: 200;
+    margin-bottom: 50px;
+    font-family: Arial ;
+     
+}
+.material-symbols-outlined {
+    font-size: 70px;
+    margin-right: 25px;
+    margin-left: 10px;
+}
+.fa-facebook {
+            color: #4267B2;
+        }
+        .fa-twitter{
+            color: #1DA1F2;
+        }
+        .fa-instagram{
+            color: rgb(235, 15, 51);
+        }
+        .fa-whatsapp{
+            color: 	#075E54;
+        }
+        .fa-linkedin{
+            color: #0A66C2;
+        }
+@media(max-width: 600px){
+
+.hideOnMobile{
+    display: none;
+}
+.menu-button{
+    display:block;
+}
+.sideba{
+width: 100%;
+}
+}
+ 
+
+</style>
+<body>
+    <nav class="navbar"> 
+        <div class="navdiv"> 
+            
+            <div class="logo"><a href="index.html">Numeral</a></div>
+            <ul>
+                <li class="hideOnMobile"><a href="index.html">Home</a></li>
+                <li class="hideOnMobile"><a href="product.html">Products</a></li>
+                <li class="hideOnMobile"><a href="blog.html">Blog</a></li>
+                <li class="hideOnMobile"><a href="about.html">About</a></li>
+                <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+                <li class="menu-button" onclick=showSideba()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+            <ul class="sideba">
+                <li onclick=hideSideba()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a> 
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul> 
+        </div>
+    </nav
+    <section class="section fir-section">
+        <div class="blob">
+            <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+                <path fill="#00cec9">
+                    <animate attributeName="d"
+                    dur="10000ms"
+                    repeatCount="indefinite"
+                    values="M408,281Q410,312,398.5,343.5Q387,375,360.5,396.5Q334,418,298,398Q262,378,234,391Q206,404,169.5,404.5Q133,405,115.5,374.5Q98,344,70.5,316.5Q43,289,32,248Q21,207,61.5,183Q102,159,126,138.5Q150,118,179.5,112.5Q209,107,239.5,71.5Q270,36,294,75Q318,114,364,109Q410,104,409,146.5Q408,189,407,219.5Q406,250,408,281Z;
+                    M430,276Q384,302,367.5,322Q351,342,334,363.5Q317,385,289.5,384.5Q262,384,228.5,413.5Q195,443,154,437.5Q113,432,119.5,379.5Q126,327,79.5,309Q33,291,25,248.5Q17,206,67,186.5Q117,167,111.5,113.5Q106,60,151.5,61.5Q197,63,230,84Q263,105,311.5,67Q360,29,354.5,94.5Q349,160,415,160Q481,160,478.5,205Q476,250,430,276Z;
+                    M443,289.5Q455,329,413,344.5Q371,360,338.5,361.5Q306,363,288.5,418Q271,473,226.5,481Q182,489,154,452Q126,415,129.5,369Q133,323,70,309Q7,295,36.5,255.5Q66,216,73.5,180.5Q81,145,103.5,115.5Q126,86,170.5,106Q215,126,239,119Q263,112,299,95.5Q335,79,376.5,88Q418,97,432.5,135.5Q447,174,439,212Q431,250,443,289.5Z;
+                    M422,290.5Q458,331,404,336Q350,341,346,387.5Q342,434,307,460.5Q272,487,232,470.5Q192,454,146.5,450.5Q101,447,111,388.5Q121,330,92,307.5Q63,285,66.5,250.5Q70,216,74,180Q78,144,95,105.5Q112,67,153.5,62Q195,57,231,59.5Q267,62,307.5,57Q348,52,385,73Q422,94,439,132Q456,170,421,210Q386,250,422,290.5Z;
+                    M408,281Q410,312,398.5,343.5Q387,375,360.5,396.5Q334,418,298,398Q262,378,234,391Q206,404,169.5,404.5Q133,405,115.5,374.5Q98,344,70.5,316.5Q43,289,32,248Q21,207,61.5,183Q102,159,126,138.5Q150,118,179.5,112.5Q209,107,239.5,71.5Q270,36,294,75Q318,114,364,109Q410,104,409,146.5Q408,189,407,219.5Q406,250,408,281Z;
+                    "
+                    ></animate>
+                </path>
+              </svg>
+            <div class="text-container">
+                <p>About Us</p>
+            </div>
+        </div>
+    </section>
+    <section class="section sec-section">
+        <p>
+            At Numeral, we believe that every innovation, every breakthrough, every leap forward in
+            technology is driven by one constant: numbers. Numbers shape our world, providing the foundation
+            upon which progress is built and ideas are brought to life. Established with a passion for precision
+            and a commitment to unlocking the power within numerical data, Numeral is at the forefront of a
+            digital revolution where data-driven insights fuel the engines of progress.
+             
+
+            Our journey began with a simple yet profound realization - numbers are not just figures on a page or
+            data points on a graph; they are the language of possibilities. At Numeral, we speak this language
+            fluently and understand the untapped potential that lies within the vast expanse of numerical
+            information. Whether it's decoding complex algorithms, predicting future trends, or optimizing
+           
+            processes for efficiency, we harness the power of numbers to drive innovation and empower
+            businesses to reach new heights.
+            As a team of dedicated professionals with diverse expertise in data science, mathematics, and
+            technology, we are united by a common goal: to demystify the world of data and make it accessible
+            to all. In a landscape where information overload can be overwhelming, we strive to simplify the
+            complexities of numerical data, making it not only comprehensible but also actionable.
+              
+            Numeral stands as a testament to the belief that every organization, regardless of its size or industry,
+            can leverage the transformative potential of data. From startups aiming to disrupt the market to
+            established enterprises seeking to stay ahead of the curve, we provide tailored solutions that turn
+            raw data into strategic assets. Our suite of cutting-edge tools and services is designed to empower
+            decision-makers, foster innovation, and propel businesses toward sustainable growth.
+
+            In an era where the digital landscape is evolving at an unprecedented pace, Numeral is committed
+            to being a guiding force, helping businesses navigate the complexities of data with confidence. We
+            envision a future where numbers are not barriers but bridges, connecting ideas, industries, and
+            individuals. Through our unwavering dedication to excellence, Numeral is shaping a world where the
+            language of numbers is not only understood but also celebrated as the driving force behind progress
+            and innovation.
+
+            Join us on this exciting journey as we redefine the possibilities that lie within the realm of numbers.
+            At Numeral, we are not just decoding data; we are unlocking the future.
+
+
+        </p>
+    
+
+    </section>
+    <div class="wholesome-b">
+        <div class="section-heading">Meet Our Team </div>
+        <div class="card-container">
+            <div class="card">
+                <img src="Derrick.jpg" alt="Person 1">
+                <h3>Derrick Bwalya</h3>
+                <p>CEO/Founder</p>
+            </div>
+
+            <div class="card">
+                <img src="Wana.jpg" alt="Person 2">
+                <h3>Wana Kapula</h3>
+                <p>COO/CO-Founder</p>
+            </div>
+
+            <div class="card">
+                <img src="Waza.jpg" alt="Person 3">
+                <h3>Waza</h3>
+                <p>Chief Engineer</p>
+            </div>
+
+            
+        </div>
+        <div class="emplo">
+            <span class="material-symbols-outlined">
+                groups
+                </span>
+            
+            <p>  500 EMPLOYEES</p>
+        </div>
+    </div>
+    <script>
+        function showSideba(){
+            const sideba = document.querySelector('.sideba')
+            sideba.style.display = 'flex'
+        }
+        function hideSideba(){
+            const sideba = document.querySelector('.sideba')
+            sideba.style.display = 'none'
+        }
+      </script>
+</body>
+</html>

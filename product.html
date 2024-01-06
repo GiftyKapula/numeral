@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Text+Me+One&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <script defer src="script.js"></script>
+   <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    .navbar {
+      font-family: 'Text Me One', sans-serif;
+      background-color: white;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-bottom: 10px;
+      padding-top: 10px;   
+      margin-right: 9%;      
+    }
+    .navdiv {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo a {
+      font-size: 20px;
+      font-weight: lighter;
+      color: rgb(15, 14, 14);
+      text-decoration: none;
+      margin-left: 190%;
+    }
+
+
+    ul {
+     list-style: none;
+     display: flex;
+    }
+
+    li {
+      margin-left: 25px;
+       
+    }
+
+    li:last-child {
+      margin-right: 0;
+    }
+
+    li a {
+        color: rgb(5, 5, 5);
+        font-size: 15px;
+        font-weight: lighter;
+        text-decoration: none;
+    }
+    .navdiv a:hover {
+        background-color: #020202;
+        border-radius: 10px;
+        font-size: 15px;
+        color: white;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+    .menu-button{
+      display: none;
+    }
+    .sideba{
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 300px;
+      height: 100vh;
+      z-index: 999;
+      background-color: rgb(253, 253, 253);
+      backdrop-filter: blur(5px);
+      box-shadow: -10px 0 10px rgba(0, 0, 0, 0.5);
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+            
+    }
+    .sideba li{
+      width: 100%;
+      margin: 20px;   
+
+    }
+    .sideba a{
+      width: 100%;
+      font-size: 30px;
+      color: #050505;
+    }
+    .section {
+      display: flex; 
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      padding: 20px;
+      flex: 1;
+    }
+
+    .section:nth-child(odd) {
+      height: 200px;
+      margin-left: 145px;
+      width: 78%;
+       
+    }
+
+    .section:nth-child(even) {
+      height: 190px;
+      margin-left: 145px;
+      width: 78%;
+       
+    }
+
+    img, video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .section:nth-child(2) {
+      
+    
+     
+    }
+
+    .section:nth-child(3) {
+      flex-direction: row;
+    }
+
+    .section:nth-child(3) img {
+      flex: 1;
+      margin: 0 5px;
+    }
+
+    .card {
+      max-width: 300px;
+      margin: 10px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Individual section styles */
+    .first-section {
+        background: url('Pexel.jpg') center/cover;
+        opacity: 1.0;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-bottom: 10px;
+    }
+    .first-section button {
+        width: 250px;
+        padding: 7px 15px;
+        font-size: 13px;
+        font-style: italic;
+        background-color: #fff;
+        color: #050505;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    .first-section button:hover {
+    background-color: #6d7072;
+    color: #fff;
+    }
+    
+    .second-section.with-background {
+      background: url('Numeral37.jpg') center/cover;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-bottom: 0;
+      height: 130px;
+     
+    }
+
+
+    .second-section {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+    }
+
+    .second-section img {
+      max-width: 200px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      width:220px;
+      height: 145px;
+    }
+
+    .second-section .content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 10px;  
+       
+    }
+
+    .second-section p,
+    .second-section h1,
+    .second-section .angry {
+      margin: 3px; /* Adjust margin as needed */
+      color: rgb(255, 253, 253);
+    }
+    .second-section h1{
+      font-size: 20px;
+      font-weight: lighter;
+
+    }
+
+    .second-section p {
+      font-size: 13px;
+    }
+
+    .second-section .angry {
+      margin-top: 10px; /* Adjust margin-top as needed */
+      font-size: 11px;
+    }
+
+    .download-btn {
+      margin-top: 6px; /* Adjust margin-top as needed */
+      padding: 6px 9px;
+      background-color: #fdfeff;
+      color: #0a0a0a;
+      text-decoration: none;
+      border-radius: 15px;
+      font-size: 9px;
+      display: inline-block;
+    }
+
+    .third-section {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      flex-direction: row; /* Set the flex-direction to row */
+      background: #14242d;
+    }
+
+    video {
+      max-width: 100%;
+      height: auto;
+      margin-right: 20px; /* Adjust the margin as needed to create space between video and screenshots */
+      width: 250px;
+    }
+
+    .screenshots {
+      display: flex;
+    }
+
+    .screenshots img {
+      max-width: 100%;
+      height: 125px;
+      width: 180px;
+      margin-right: 10px; /* Adjust the margin as needed to create space between screenshots */
+    }
+    
+    .fourth-section {
+      color: #0a0a0a;
+      background: #14242d;
+      font-family: Arial;
+    }
+    
+    
+    .fourth-section p{
+      font-weight: lighter;
+      text-align: left;
+      margin-bottom: 5%;
+      margin-left: 5px;
+      font-size: 15px;
+      color: #f5f4f3;
+      font-family: 'Text Me One', sans-serif;
+    
+    }
+     
+    
+
+    .fifth-section {
+      justify-content: left;
+      background: #14242d;
+      margin-bottom: 90px;
+    }
+    
+
+    .rating-container {
+      text-align:left;
+      
+    }
+
+     
+
+    .rating-bar {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .bar {
+      width: 150px;
+      height: 6px;
+      background-color: #ccc;
+      position: relative;
+      margin-right: 10px;
+      margin-left: 25px;
+      border-radius: 10px ;
+    }
+
+    .fill {
+      height: 100%;
+      background-color: #f3d00b;
+    }
+
+     
+
+    .numba {
+      font-size: 45px;
+       display: flex;
+       color: #050505;
+       
+    }
+    .numb {
+      font-size: 40px;
+      margin-right: 15px;
+      color: #fdfbfb;
+      
+         
+    }
+    .sta {
+      color: #f5d20a;
+      margin-top: -5.5%;
+      font-size: 37px;  
+    }
+    .seventh-section {
+      background: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items:center;
+      margin-bottom: 40px;
+      
+       
+       
+      }
+
+    /* Style for the cards */
+    .card {
+       
+      height: 150px;
+      width: 210px;
+      text-align: center;
+      padding: 0;
+      border: 1px solid #9c9a9a;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Style for the images within the cards */
+    .card img {
+      width: 2100px; /* Make the image fill the container */
+      height: 150px; /* Maintain aspect ratio */
+      border-radius: 5px; /* Add border-radius for rounded corners */
+      margin-bottom: 10px; /* Add some margin below the image */
+    }
+    .card p{
+      color: #050505;
+      margin-right: 15px;
+      margin-top: 2px;
+    }
+     
+    .muchu {
+       
+      font-size: 15px;
+      font-family: Arial;
+      position: absolute;   
+      top: 69%; /* Adjust top value as needed */
+      left: 9.7%; /* Adjust left value as needed */
+      color:#fdfbfb;
+    }
+
+    .muchuwansangu {
+      font-size: 18px;
+      font-family: Arial;
+      position: absolute;
+      left: 9.7%; /* Adjust left value as needed */
+      top: 99%;
+      color: #fdfbfb; 
+    }
+
+    .fifth-title {
+      font-size: 18px;
+      font-family: Arial;
+      position: absolute;
+      right: 10%; /* Adjust right value as needed */
+      top: 135%;
+      color: #fdfbfb;
+    }  
+    /* text between the line */
+    
+    .muchu::before {
+      content: "";
+      display: inline-block;
+      height: 1px;
+      width: 60px; /* Adjust width of the lines */
+      background-color: #fdfcfc; /* Adjust color of the lines */
+      margin-right: 10px; /* Adjust margin as needed */
+      padding: 0 10px;  
+    }
+
+    .muchu::after{
+      content: "";
+      display: inline-block;
+      height: 1px;
+      width: 933px; /* Adjust width of the lines */
+      background-color: #fdfcfc; /* Adjust color of the lines */
+      margin-left: 10px; /* Adjust margin as needed */
+      padding: 0 10px; 
+    }
+    
+    
+    .fifth-title::before {
+      content: "";
+      display: inline-block;
+      height: 1px;
+      width: 80px; /* Adjust width of the lines */
+      background-color: #fdfcfc; /* Adjust color of the lines */
+      margin-right: 10px; /* Adjust margin as needed */
+      padding: 0 10px;
+    }
+    .fifth-title::after {
+      content: "";
+      display: inline-block;
+      height: 1px;
+      width: 915px; /* Adjust width of the lines */
+      background-color: #fdfcfc; /* Adjust color of the lines */
+      margin-left: 10px; /* Adjust margin as needed */
+      padding: 0 10px;
+    }
+    .muchuwansangu::before {
+      content: "";
+      display: inline-block;
+      height: 1px;
+      width: 60px; /* Adjust width of the lines */
+      background-color: #fdfcfc; /* Adjust color of the lines */
+      margin-right: 10px; /* Adjust margin as needed */
+      padding: 0 10px;
+    } 
+    .muchuwansangu::after  {
+      content: "";
+      display: inline-block;
+      height: 1px;
+      width: 998px; /* Adjust width of the lines */
+      background-color: #fdfcfc;/* Adjust color of the lines */
+      margin-left: 10px; /* Adjust margin as needed */
+      padding: 0 10px;
+    }
+
+
+    .site-footer {
+        display: flex;
+        flex-wrap: wrap;
+        
+        background-color: #080808;
+        color: #fff;
+        padding: 20px; 
+        bottom: 0; 
+        margin-left: 9.5%;
+        margin-right: 10%;
+    }
+
+    .footer-logo {
+        font-size: 30px;
+        margin-top: 5px;
+    
+    }
+
+    .footer-logo img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .tyyfoot {
+        font-size: 30px;
+        margin-bottom: 4px;
+    }
+
+    .contact-info {
+        
+        margin-left: 20px; /* Adjust the margin-left as needed */
+    }
+
+    .info-row {
+        margin-bottom: 5px;
+    }
+
+    .social-icons a {
+        color: #fff;
+        margin: 0 10px;
+        text-decoration: none;
+        font-size: 30px;  
+
+    }
+
+    .social-icons {
+      margin-top: 3%;
+      margin-left: 47%;
+    }
+    .fa-facebook {
+            color: #4267B2;
+        }
+        .fa-twitter{
+            color: #1DA1F2;
+        }
+        .fa-instagram{
+            color: rgb(235, 15, 51);
+        }
+        .fa-whatsapp{
+            color: 	#075E54;
+        }
+        .fa-linkedin{
+            color: #0A66C2;
+        }
+    @media(max-width: 600px){
+
+      .hideOnMobile{
+          display: none;
+      }
+      .menu-button{
+          display:block;
+      }
+      .sideba{
+        width: 100%;
+      }
+    }
+
+
+     
+     
+
+
+
+
+
+
+  </style>
+  
+  <title>Flexbox Sections</title>
+</head>
+<body>
+  <nav class="navbar"> 
+        <div class="navdiv"> 
+            
+            <div class="logo"><a href="index.html">Numeral</a></div>
+            <ul>
+                <li class="hideOnMobile"><a href="index.html">Home</a></li>
+                <li class="hideOnMobile"><a href="product.html">Products</a></li>
+                <li class="hideOnMobile"><a href="blog.html">Blog</a></li>
+                <li class="hideOnMobile"><a href="about.html">About</a></li>
+                <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+                <li class="menu-button" onclick=showSideba()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+            <ul class="sideba">
+                <li onclick=hideSideba()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a> 
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul> 
+        </div>
+    </nav>
+   
+  <section class="section first-section">
+    <!-- First Section Content -->
+    <button>Search for Products</button>
+  </section>
+  
+  <section class="section second-section with-background">
+    <!-- Second Section Content -->
+    <img src="Numeral32.jpg" alt="Image">
+    <div class="content"> 
+       
+        <h1>Angry Birds</h1>
+        <p>Game</p>
+        <p>4.9</p>
+        <div class="angry">200Mb</div>
+        <br>
+        <div class="down"> 
+          <a href="#" class="download-btn">Download</a>
+        </div>
+        
+    </div>
+  </section>
+
+   
+  <section class="section third-section">
+    <div class="muchu">Video and Screenshots</div>
+    <video controls>
+      <source src="your-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="screenshots">
+        <img src="Numeral34.jpg" alt="Image 1">
+        <img src="Numeral35.jpg" alt="Image 2">
+        <img src="Numeral36.jpg" alt="Image 3">
+        <img src="Numeral37.jpg" alt="Image 4">
+    </div>
+  </section>
+   
+  <section class="section fourth-section">
+    <div class="muchuwansangu">Description</div>  
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+      Omnis minima suscipit iusto quidem
+      animi nihil mollitia 
+      voluptatum voluptatibus quas facilis harum obcaecati aperiam sunt eligendi, 
+      hic molestias perspiciatis illum
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+      Debitis dolores atque beatae officiis corrupti fugiat consectetur quidem 
+      unde assumenda commodi ipsam autem sit sint repudiandae, quibusdam aliquam modi ullam culpa!
+
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+      Omnis minima suscipit iusto quidem
+      animi nihil mollitia 
+      voluptatum voluptatibus quas facilis harum obcaecati aperiam sunt eligendi, 
+      hic molestias perspiciatis illum
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+      Debitis dolores atque beatae officiis corrupti fugiat consectetur quidem 
+      unde assumenda commodi ipsam autem sit sint repudiandae, quibusdam aliquam modi ullam culpa!
+    </p>
+
+    
+  </section>
+   
+  <section class="section fifth-section">
+    <div class="fifth-title">Ratings and Reviews</div> 
+    <div class="numba">
+      <div class="numb">4.9</div>
+      <div class="sta">&#9733;</div>
+    </div>
+     
+  
+    <div class="rating-container">
+      <div class="rating-bar">   
+        <div class="bar"><div class="fill" style="width: 90%;"></div></div>
+      </div>
+  
+      <div class="rating-bar">   
+        <div class="bar"><div class="fill" style="width: 70%;"></div></div>
+      </div>
+  
+      <div class="rating-bar">
+        <div class="bar"><div class="fill" style="width: 50%;"></div></div>
+      </div>
+  
+      <div class="rating-bar"> 
+        <div class="bar"><div class="fill" style="width: 30%;"></div></div>
+      </div>
+  
+      <div class="rating-bar">
+        <div class="bar"><div class="fill" style="width: 20%;"></div></div> 
+      </div>
+    </div>
+    <div>
+       
+    </div>
+  </section>
+  <section class="section seventh-section">
+    <!-- Seventh Section Content -->
+   <div class="card">
+      <img src="Numeral11.jpg" alt="Image 1">
+      <p>Spotify</p>
+    </div>
+  
+    <div class="card">
+      <img src="Numeral12.jpg" alt="Image 2">
+      <p>Apple</p>
+    </div>
+  
+    <div class="card">
+      <img src="Numeral13.jpg" alt="Image 3">
+      <p>Tesla</p>
+    </div>
+  
+    <div class="card">
+      <img src="Numeral14.jpg" alt="Image 4">
+      <p>Bitcoin</p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-logo">
+        <img src="Numeral29.jpg" alt="Numeral">
+    </div>
+    <div class="contact-info">
+        <div class="tyyfoot">Contact Info</div>
+        <div class="info-row">Phone: +1 123 456 789</div>
+        <div class="info-row">Email: info@numeral001.com</div>
+        <div class="info-row">Address: 123 Main Street, City</div>
+    </div>
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+</footer>
+
+<script>
+  function showSideba(){
+      const sideba = document.querySelector('.sideba')
+      sideba.style.display = 'flex'
+  }
+  function hideSideba(){
+      const sideba = document.querySelector('.sideba')
+      sideba.style.display = 'none'
+  }
+</script>
+  
+</body>
+</html>

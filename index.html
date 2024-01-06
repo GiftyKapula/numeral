@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Text+Me+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  
+    <style type="text/css">
+    
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Text Me One', sans-serif;
+            
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            
+        }
+        #wrapper-div {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+        }
+        .navbar {
+            background-color: white;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-bottom: 10px;
+            padding-top: 10px;         
+        }
+        .navdiv {
+             display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo a {
+            font-size: 25px;
+            font-weight: lighter;
+            color: rgb(15, 14, 14);
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+        }
+
+        li {
+            margin-right: 25px;
+        }
+
+        li:last-child {
+            margin-right: 0;
+        }
+
+        li a {
+            color: rgb(5, 5, 5);
+            font-size: 16px;
+            font-weight: lighter;
+            text-decoration: none;
+        }
+        .navdiv a:hover {
+            background-color: #020202;
+            border-radius: 10px;
+            font-size: 15px;
+            color: white;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            padding-left: 4px;
+            padding-right: 4px;
+        }
+        .sideba{
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 100vh;
+            z-index: 999;
+            background-color: rgb(253, 253, 253);
+            backdrop-filter: blur(5px);
+            box-shadow: -10px 0 10px rgba(0, 0, 0, 0.5);
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            
+        }
+        .sideba li{
+            width: 100%;
+            margin: 20px;   
+
+        }
+        .sideba a{
+            width: 100%;
+            font-size: 30px;
+            color: #050505;
+        }
+
+        #header-banner-div {
+            width: 100%;
+            min-height: 400px;
+            position: relative;
+            margin-bottom: 3%;
+            border-radius: 10px;
+        }
+
+        .slideshow-container {
+            display: flex;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-top: 14px;
+        }
+
+        .mySlides {
+            flex: 0 0 100%; /* Take full width of the container */
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        img {
+            width: 100%;
+            vertical-align: top;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Adjust the last value for opacity */
+        }
+
+        .wev-div {
+            
+            position: absolute;
+            top: 20%;
+            left: 13%;
+            transform: translate(-50%, -50%);
+            font-size: 45px;
+            color: white;
+            z-index: 1; /* Ensure text is on top of the overlay */
+        }
+        .subtext {
+            
+            position: absolute;
+            top: 26%;
+            left: 15%;
+            transform: translateX(-50%);
+            font-size: 15px;
+            color: white;
+            z-index: 1;
+        }
+
+        #wev-div {
+            margin-top: 30px;
+            font-size: 45px;
+        }
+
+        .main-div{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: left;
+            margin-bottom: 3%;
+            margin-left: 9%;
+        }
+        .flexbox-stuff {
+                width:250px;
+                margin: 20px;
+                background-color: #dfdfdf;
+                border-radius: 10px;
+                height: 200px;
+            }
+        
+         
+        .sidebar-div {
+            background-image: url("Numeral10.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 220px;
+            width: 350px;
+            
+            
+        }
+        .bodyarea-div{
+            min-height: 200px;
+            width: 990px;
+            background-color: white;
+            margin-left: -5px;
+        }
+        .min-title{
+            font-size: 35px;
+            margin-bottom: 20px;
+            font-family:  Arial;
+        }       
+        .paragraph-div{ 
+            text-align: left;
+        }
+        .paragraph-div p{
+            font-size: 18px;
+        }
+        .readmore-btn{
+        margin-top: 45px;
+        text-decoration: none;
+        background-color: #050505;
+        color: white;
+        font-family: Arial;
+        font-size: 10px;
+        padding: 5px 20px;
+        border-radius: 15px;
+        display: inline-flex;
+
+        }
+
+        .TyTo{
+            font-size: 30px;
+            font-weight: 400;
+            margin-left: 10%;
+            font-family: Arial;
+        }
+
+        .flexbox-container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: left;
+            margin-bottom: 3%;
+            margin-left: 9%;
+        }
+        
+        .flexbox-item {
+            width:320px;
+            margin: 15px;
+            background-color: #f0e9e9;
+            border-radius: 20px;
+            height: 350px;
+            
+        }
+    
+
+        .flexbox-item-1{
+            min-height: 200px;
+        }
+        .flexbox-item-1{
+            min-height: 200px ;
+        }
+        .flexbox-item-1{
+            min-height: 200px;
+
+        }
+        .flexbox-item-1{
+            min-height: 200px;
+        }
+        .flexbox-item img {
+            max-width: 60%;
+            height: 155px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            margin-top: 15px;
+        }
+        h3 {
+            font-weight: lighter;
+            font-family: Arial ;
+            margin-left: 10px;
+
+        }
+        .bando{
+            margin-left: 10px;
+        }
+        .checked {
+            color: #ffd700; 
+            margin-left: 7px;
+        }
+        .unchecked {
+            color: #fcfdfd;
+        }
+         
+
+        .download-btn {
+             
+            margin-bottom: 30px; /* Adjust the bottom spacing as needed */
+            margin-left: 15px; /* Adjust the left spacing as needed */
+            margin-top: 33px;
+            text-decoration: none;
+            background-color: #050505;
+            color: white;
+            font-size: 13px;
+            font-family: Arial ;
+            padding: 3px 10px;
+            border-radius: 15px;
+            display: inline-flex;
+        }
+
+        .arrow-circle {
+            width: 37px; /* Adjust the circle size as needed */
+            height: 35px; /* Adjust the circle size as needed */
+            background-color: #f0f3f5; /* Set the circle color to your preference */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 12%;
+            }
+
+        .material-symbols-outlined{
+             
+            font-size: 25px; /* Adjust the font size as needed */
+            color: #1a1919; 
+            
+            
+        }
+        .Yuza{
+            font-size: 30px;
+            font-family: Arial;
+            font-weight: 400;
+            margin-left: 10%;
+            margin-bottom: 7px;
+
+        }
+        .Kontainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: left;
+            background-color: rgba(255, 251, 251, 0.904);
+            margin-left: 9%;
+        }
+
+                /* Card styling */
+        .flexybox-item {
+            width: 436px;
+            margin: 15px;
+            background-color: rgba(236, 234, 234, 0.774);
+            overflow: hidden; /* Hide overflow content (image) */
+            height: 350px;
+        }
+
+        /* Image styling */
+        .flexybox-item img {
+            width: 50%; /* Make the image fill the container */
+            height: 150px; /* Maintain aspect ratio */
+            border-radius: 50%;
+            margin-left: 50px;
+            margin-bottom: 5px;
+               
+        }
+
+        /* Common styling for card content */
+        .stuff-1, .stuff-2, .stuff-3 {
+            min-height: 200px;
+            padding: 60px;
+             
+        }
+
+        /* Additional styling for title and content */
+        h2 {
+            margin: 5px 0;
+            font-size: 30px;
+        }
+        p {
+            margin: 3px ;
+            font-size: 17px;
+             
+             
+        }
+
+
+        .feedback-btn {
+             
+             margin-bottom: 10%;  
+             margin-left: 47%;  
+             margin-top: 10px;
+             text-decoration: none;
+             background-color: #050505;
+             color: white;
+             font-family: Arial;
+             font-size: 12px;
+             padding: 5px 20px;
+             border-radius: 15px;
+             display: inline-flex;
+         }
+         
+         .site-footer {
+            display: flex;
+            flex-wrap: wrap;  
+            background-color: #080808;
+            color: #fff;
+            padding: 20px; 
+            bottom: 0; 
+            margin-left: 9.5%;
+            margin-right: 9%;
+        }
+
+        .footer-logo {
+            font-size: 30px;
+            margin-top: 5px;
+        
+        }
+
+        .footer-logo img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .tyyfoot {
+            font-size: 30px;
+            margin-bottom: 4px;
+        }
+
+        .contact-info {
+            
+            margin-left: 20px; /* Adjust the margin-left as needed */
+        }
+
+        .info-row {
+            margin-bottom: 5px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 30px;  
+
+        }
+
+        .social-icons {
+          margin-top: 3%;
+          margin-left: 47%;
+        }
+        .fa-facebook {
+            color: #4267B2;
+        }
+        .fa-twitter{
+            color: #1DA1F2;
+        }
+        .fa-instagram{
+            color: rgb(235, 15, 51);
+        }
+        .fa-whatsapp{
+            color: 	#075E54;
+        }
+        .fa-linkedin{
+            color: #0A66C2;
+        }
+        .menu-button{
+            display: none;
+        }
+
+        @media(300px <= width <= 400px){
+        #header-banner-div {
+        width: 100%;
+        min-height: 250px;
+        position: relative;
+        margin-bottom: 3%;
+        border-radius: 10px;
+        }
+
+        .slideshow-container {
+        display: flex;
+        overflow: hidden;
+        border-radius: 10px;
+        margin-top: 14px;
+        }
+
+        .mySlides {
+        flex: 0 0 100%; /* Take full width of the container */
+        box-sizing: border-box;
+        position: relative;
+        }
+
+        img {
+        width: 100%;
+        vertical-align: top;
+        height: 250px;
+        object-fit: cover;
+        }
+
+        .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Adjust the last value for opacity */
+        }
+
+        .wev-div {
+
+        position: absolute;
+        top: 20%;
+        left: 22%;
+        transform: translate(-50%, -50%);
+        font-size: 35px;
+        color: white;
+        z-index: 1; /* Ensure text is on top of the overlay */
+        }
+        .subtext {
+
+        position: absolute;
+        top: 26%;
+        left: 26%;
+        transform: translateX(-50%);
+        font-size: 11px;
+        color: white;
+        z-index: 1;
+        }
+
+        #wev-div {
+        margin-top: 30px;
+        font-size: 45px;
+        }
+        .sideba{
+        width: 100%;
+        }
+        .hideOnMobile{
+        display: none;
+        }
+        .menu-button{
+        display:block;
+        }
+        .main-div{
+        margin-bottom: 10px;
+        }
+        .sidebar-div{
+        min-height: 100px;
+        width: 315px;
+        margin-left: 7px;
+        border-radius: 0;
+        }
+        .bodyarea-div{
+        min-height: 200px;
+        width: 300px;
+        background-color: white;
+        margin-left: 10px;
+        }
+        .min-title{
+        font-size: 22px;
+        margin-bottom: 15px;
+        font-family:  Arial;
+
+
+        }       
+        .paragraph-div{
+
+        text-align: left;
+        }
+        .paragraph-div p{
+        font-size: 13px;
+        }
+
+
+        .TyTo{
+        font-size: 25px;
+        margin-left: 16%;
+        }
+
+        .flexbox-container{
+        margin-bottom: -10%;
+        }
+
+        .flexbox-item {
+        width:140px;
+        margin: 10px;
+        background-color: #f0e9e9;
+        border-radius: 10px;
+        height: 200px;
+        margin-left: 4%;
+        }
+
+        .flexbox-item img {
+        max-width: 60%;
+        height: 75px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-top: 15px;
+        }
+        h3 {
+        font-weight: lighter;
+        font-family: Arial ;
+        margin-left: 8px;
+
+        }
+        .bando{
+        margin-left: 10px;
+        font-size: 9px;
+        }
+        .checked {
+        color: #ffd700; 
+        margin-left: 7px;
+
+        }
+        .unchecked {
+        color: #fcfdfd;
+        }
+        .sta {
+        font-size: 10px;
+        }
+
+
+        .download-btn {
+
+        margin-bottom: 30px; /* Adjust the bottom spacing as needed */
+        margin-left: 15px; /* Adjust the left spacing as needed */
+        margin-top: 10px;
+        text-decoration: none;
+        background-color: #050505;
+        color: white;
+        font-size: 11px;
+        font-family: Arial ;
+        padding: 3px 10px;
+        border-radius: 15px;
+        display: inline-flex;
+        }
+
+        .arrow-circle {
+        width: 37px; /* Adjust the circle size as needed */
+        height: 35px; /* Adjust the circle size as needed */
+        background-color: #f0f3f5; /* Set the circle color to your preference */
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 8%;
+        margin-left: 80%;
+        }
+
+        .material-symbols-outlined{
+
+        font-size: 30px; /* Adjust the font size as needed */
+        color: #1a1919; 
+
+
+        }
+        .Yuza{
+        font-size: 25px;
+        margin-left: 15%;
+        margin-top: 20%;
+        }
+
+
+        .flexybox-item {
+        width: 250px;
+        margin: 15px;
+        background-color: rgba(236, 234, 234, 0.774);
+        overflow: hidden; /* Hide overflow content (image) */
+        height: 190px;
+        margin-left: 10%;
+        }
+
+        /* Image styling */
+        .flexybox-item img {
+        width: 40%; /* Make the image fill the container */
+        height: 50px; /* Maintain aspect ratio */
+        border-radius: 50%;
+        margin-left: 50px;
+        margin-bottom: 5px;
+
+        }
+
+        /* Common styling for card content */
+        .stuff-1, .stuff-2, .stuff-3 {
+        min-height: 150px;
+        padding: 40px;
+
+        }
+
+        /* Additional styling for title and content */
+        h2 {
+        margin: 5px 0;
+        font-size: 15px;
+        }
+        p {
+        margin: 3px ;
+        font-size: 10px;   
+        }
+        .feedback-btn {
+
+        margin-bottom: 10%;  
+        margin-left: 39%;  
+        margin-top: 10px;
+        text-decoration: none;
+        background-color: #050505;
+        color: white;
+        font-family: Arial;
+        font-size: 10px;
+        padding: 5px 20px;
+        border-radius: 15px;
+        display: inline-flex;
+        }
+        .footer-logo {
+        font-size: 20px;
+        margin-top: 5px;
+
+        }
+
+        .footer-logo img {
+        width: 35px;
+        height: 50px;
+        margin-left: -10px;
+        }
+
+        .tyyfoot {
+        font-size: 15px;
+        margin-bottom: 4px;
+        }
+
+        .contact-info {
+
+        margin-left: 5px; /* Adjust the margin-left as needed */
+        }
+
+        .info-row {
+        margin-bottom: 5px;
+        font-size: 8px;
+        }
+
+        .social-icons a {
+        color: #fff;
+        margin: 0 4px;
+        text-decoration: none;
+        font-size: 5px;  
+
+        }
+
+        .social-icons {
+        margin-top: -16%;
+        margin-left: 65%;
+        }
+    }
+
+    @media(400px <= width <= 500px) {
+
+        #header-banner-div {
+        width: 100%;
+        min-height: 220px;
+        position: relative;
+        margin-bottom: 3%;
+        border-radius: 10px;
+        }
+
+        .slideshow-container {
+        display: flex;
+        overflow: hidden;
+        border-radius: 10px;
+        margin-top: 14px;
+        }
+
+        .mySlides {
+        flex: 0 0 100%; /* Take full width of the container */
+        box-sizing: border-box;
+        position: relative;
+        }
+
+        img {
+        width: 100%;
+        vertical-align: top;
+        height: 250px;
+        object-fit: cover;
+        }
+
+        .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Adjust the last value for opacity */
+        }
+
+        .wev-div {
+
+        position: absolute;
+        top: 20%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+        font-size: 35px;
+        color: white;
+        z-index: 1; /* Ensure text is on top of the overlay */
+        }
+        .subtext {
+
+        position: absolute;
+        top: 26%;
+        left: 27%;
+        transform: translateX(-50%);
+        font-size: 11px;
+        color: white;
+        z-index: 1;
+        }
+
+        #wev-div {
+        margin-top: 30px;
+        font-size: 45px;
+        }
+        .sideba{
+        width: 100%;
+        }
+        .hideOnMobile{
+        display: none;
+        }
+        .menu-button{
+        display:block;
+        }
+        .main-div{
+        margin-bottom: 10px;
+        }
+        .sidebar-div{
+        min-height: 100px;
+        width:353px;
+        margin-left: 7px;
+        border-radius: 0;
+        }
+        .bodyarea-div{
+        min-height: 200px;
+        width: 355px;
+        background-color: white;
+        margin-left: 10px;
+        }
+        .min-title{
+        font-size: 22px;
+        margin-bottom: 15px;
+        font-family:  Arial;
+
+
+        }       
+        .paragraph-div{
+
+        text-align: left;
+        }
+        .paragraph-div p{
+        font-size: 14px;
+        }
+
+
+        .TyTo{
+        font-size: 25px;
+        margin-left: 12%;
+        }
+        .flexbox-container{
+        margin-bottom: -10%;
+        }
+
+
+        .flexbox-item {
+        width:160px;
+        margin: 10px;
+        background-color: #f0e9e9;
+        border-radius: 10px;
+        height: 200px;
+        margin-left: 2%;
+
+        }
+        .flexbox-item img {
+        max-width: 60%;
+        height: 75px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-top: 15px;
+        }
+        h3 {
+        font-weight: lighter;
+        font-family: Arial ;
+        margin-left: 8px;
+
+        }
+        .bando{
+        margin-left: 10px;
+        font-size: 9px;
+        }
+        .checked {
+        color: #ffd700; 
+        margin-left: 7px;
+
+        }
+        .unchecked {
+        color: #fcfdfd;
+        }
+        .sta {
+        font-size: 10px;
+        }
+
+
+        .download-btn {
+
+        margin-bottom: 30px; /* Adjust the bottom spacing as needed */
+        margin-left: 15px; /* Adjust the left spacing as needed */
+        margin-top: 10px;
+        text-decoration: none;
+        background-color: #050505;
+        color: white;
+        font-size: 11px;
+        font-family: Arial ;
+        padding: 3px 10px;
+        border-radius: 15px;
+        display: inline-flex;
+        }
+
+
+        .arrow-circle {
+        width: 37px; /* Adjust the circle size as needed */
+        height: 35px; /* Adjust the circle size as needed */
+        background-color: #f0f3f5; /* Set the circle color to your preference */
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top:-3%;
+        margin-left: 2%;
+        }
+
+        .material-symbols-outlined{
+         font-size: 30px; /* Adjust the font size as needed */
+         color: #1a1919; 
+
+
+        }
+        .Yuza{
+        font-size: 22px;
+        margin-left: 13%;
+        margin-top: 20%;
+        }
+
+
+        .flexybox-item {
+        width: 160px;
+        margin: 15px;
+        background-color: rgba(236, 234, 234, 0.774);
+        overflow: hidden; /* Hide overflow content (image) */
+        height: 190px;
+        margin-left: 2%;
+        }
+
+        /* Image styling */
+        .flexybox-item img {
+        width: 40%; /* Make the image fill the container */
+        height: 50px; /* Maintain aspect ratio */
+        border-radius: 50%;
+        margin-left: 30px;
+        margin-bottom: 5px;
+
+        }
+
+        /* Common styling for card content */
+        .stuff-1, .stuff-2, .stuff-3 {
+        min-height: 150px;
+        padding: 40px;
+
+        }
+
+        /* Additional styling for title and content */
+        h2 {
+        margin: 5px 0;
+        font-size: 12px;
+        }
+        p {
+        margin: 3px ;
+        font-size: 7px;   
+        }
+        .feedback-btn {
+        margin-bottom: 10%;  
+        margin-left: 45%;  
+        margin-top: 10px;
+        text-decoration: none;
+        background-color: #050505;
+        color: white;
+        font-family: Arial;
+        font-size: 8px;
+        padding: 5px 20px;
+        border-radius: 15px;
+        display: inline-flex;
+        }
+
+        /* footer stuff */
+        .site-footer {
+        display: flex;
+        flex-wrap: wrap;  
+        background-color: #080808;
+        color: #fff;
+        padding: 20px; 
+        bottom: 0; 
+        margin-left: 11%;
+        margin-right: 9%;
+        }
+        .footer-logo {
+        font-size: 20px;
+        margin-top: 5px;
+
+        }
+
+        .footer-logo img {
+        width: 35px;
+        height: 50px;
+        margin-left: -10px;
+        }
+
+        .tyyfoot {
+        font-size: 15px;
+        margin-bottom: 4px;
+        }
+
+        .contact-info {
+
+        margin-left: 5px; /* Adjust the margin-left as needed */
+        }
+
+        .info-row {
+        margin-bottom: 5px;
+        font-size: 8px;
+        }
+
+        .social-icons a {
+        color: #fff;
+        margin: 0 4px;
+        text-decoration: none;
+        font-size: 8px;  
+
+        }
+
+        .social-icons {
+        margin-top: -14%;
+        margin-left: 65%;
+        }
+    }
+
+
+    @media(501px <= width <= 600px) {
+        #header-banner-div {
+        width: 100%;
+        min-height: 250px;
+        position: relative;
+        margin-bottom: 3%;
+        border-radius: 10px;
+        }
+
+        .slideshow-container {
+        display: flex;
+        overflow: hidden;
+        border-radius: 10px;
+        margin-top: 14px;
+        }
+
+        .mySlides {
+        flex: 0 0 100%; /* Take full width of the container */
+        box-sizing: border-box;
+        position: relative;
+        }
+
+        img {
+        width: 100%;
+        vertical-align: top;
+        height: 250px;
+        object-fit: cover;
+        }
+
+        .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Adjust the last value for opacity */
+        }
+
+        .wev-div {
+
+        position: absolute;
+        top: 20%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+        font-size: 35px;
+        color: white;
+        z-index: 1; /* Ensure text is on top of the overlay */
+        }
+        .subtext {
+
+        position: absolute;
+        top: 26%;
+        left: 27%;
+        transform: translateX(-50%);
+        font-size: 11px;
+        color: white;
+        z-index: 1;
+        }
+
+        #wev-div {
+        margin-top: 30px;
+        font-size: 45px;
+        }
+        .sideba{
+        width: 100%;
+        }
+        .hideOnMobile{
+        display: none;
+        }
+        .menu-button{
+        display:block;
+        }
+        .main-div{
+        margin-bottom: 10px;
+        }
+        .sidebar-div{
+        min-height: 100px;
+        width:475px;
+        margin-left: 7px;
+        border-radius: 0;
+        }
+        .bodyarea-div{
+        min-height: 200px;
+        width: 483px;
+        background-color: white;
+        margin-left: 10px;
+        }
+        .min-title{
+        font-size: 22px;
+        margin-bottom: 15px;
+        font-family:  Arial;
+        }       
+        .paragraph-div{
+
+        text-align: left;
+        }
+        .paragraph-div p{
+        font-size: 15px;
+        }
+
+
+        .TyTo{
+        font-size: 25px;
+        margin-left: 12%;
+        }
+        .flexbox-container{
+        margin-bottom: -10%;
+        }
+
+
+        .flexbox-item {
+        width:140px;
+        margin: 10px;
+        background-color: #f0e9e9;
+        border-radius: 10px;
+        height: 200px;
+        margin-left: 3%;
+
+        }
+        .flexbox-item img {
+        max-width: 60%;
+        height: 75px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-top: 15px;
+        }
+        h3 {
+        font-weight: lighter;
+        font-family: Arial ;
+        margin-left: 8px;
+
+        }
+        .bando{
+        margin-left: 10px;
+        font-size: 9px;
+        }
+        .checked {
+        color: #ffd700; 
+        margin-left: 7px;
+
+        }
+        .unchecked {
+        color: #fcfdfd;
+        }
+        .sta {
+        font-size: 10px;
+        }
+
+        .download-btn {
+        margin-bottom: 30px; /* Adjust the bottom spacing as needed */
+        margin-left: 15px; /* Adjust the left spacing as needed */
+        margin-top: 10px;
+        text-decoration: none;
+        background-color: #050505;
+        color: white;
+        font-size: 11px;
+        font-family: Arial ;
+        padding: 3px 10px;
+        border-radius: 15px;
+        display: inline-flex;
+        }
+
+
+        .arrow-circle {
+        width: 37px; /* Adjust the circle size as needed */
+        height: 35px; /* Adjust the circle size as needed */
+        background-color: #f0f3f5; /* Set the circle color to your preference */
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top:15%;
+        margin-left: 6%;
+        }
+
+        .material-symbols-outlined{
+        font-size: 30px; /* Adjust the font size as needed */
+        color: #1a1919; 
+
+
+        }
+        .Yuza{
+        font-size: 23px;
+        margin-left: 13%;
+        margin-top: 20%;
+        }
+
+
+        .flexybox-item {
+        width: 220px;
+        margin: 15px;
+        background-color: rgba(236, 234, 234, 0.774);
+        overflow: hidden; /* Hide overflow content (image) */
+        height: 190px;
+        margin-left: 4%;
+        }
+
+        /* Image styling */
+        .flexybox-item img {
+        width: 40%; /* Make the image fill the container */
+        height: 50px; /* Maintain aspect ratio */
+        border-radius: 50%;
+        margin-left: 45px;
+        margin-bottom: 5px;
+
+        }
+
+        /* Common styling for card content */
+        .stuff-1, .stuff-2, .stuff-3 {
+        min-height: 150px;
+        padding: 40px;
+
+        }
+
+        h2 {
+        margin: 5px 0;
+        font-size: 15px;
+        }
+        p {
+        margin: 3px ;
+        font-size: 10px;   
+        }
+        .feedback-btn {
+        margin-bottom: 10%;  
+        margin-left: 45%;  
+        margin-top: 10px;
+        text-decoration: none;
+        background-color: #050505;
+        color: white;
+        font-family: Arial;
+        font-size: 10px;
+        padding: 5px 20px;
+        border-radius: 15px;
+        display: inline-flex;
+        }
+        
+
+        /* footer stuff */
+        .site-footer {
+        display: flex;
+        flex-wrap: wrap;  
+        background-color: #080808;
+        color: #fff;
+        padding: 20px; 
+        bottom: 0; 
+        margin-left: 13%;
+        margin-right: 8%;
+        }
+        .footer-logo {
+        font-size: 20px;
+        margin-top: 5px;
+
+        }
+
+        .footer-logo img {
+        width: 35px;
+        height: 50px;
+        margin-left: -10px;
+        }
+
+        .tyyfoot {
+        font-size: 15px;
+        margin-bottom: 4px;
+        }
+
+        .contact-info {
+
+        margin-left: 5px; /* Adjust the margin-left as needed */
+        }
+
+        .info-row {
+        margin-bottom: 5px;
+        font-size: 8px;
+        }
+
+        .social-icons a {
+        color: #fff;
+        margin: 0 4px;
+        text-decoration: none;
+        font-size: 15px;  
+
+        }
+
+        .social-icons {
+        margin-top: -12%;
+        margin-left: 65%;
+        }
+        }
+
+        @media(max-width: 1030px){
+
+            .hideOnMobile{
+                display: none;
+            }
+            .menu-button{
+                display:block;
+            }
+            .sidebar-div{
+                min-height: 150px;
+                width: 300px;
+            }
+            .bodyarea-div{
+            min-height: 200px;
+            width: 450px;
+            background-color: white;
+            margin-left: -5px;
+            }
+            .min-title{
+                font-size: 25px;
+                margin-bottom: 15px;
+                font-family:  Arial;
+                
+            
+            }       
+            .paragraph-div{
+                
+                text-align: left;
+            }
+            .paragraph-div p{
+                font-size: 15px;
+            }
+            .flexbox-item {
+            width:250px;
+            margin: 15px;
+            background-color: #f0e9e9;
+            border-radius: 10px;
+            height: 250px;
+            
+            }
+            .flexbox-item img {
+            max-width: 60%;
+            height: 90px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            margin-top: 15px;
+            }
+            h3 {
+            font-weight: lighter;
+            font-family: Arial ;
+            margin-left: 10px;
+
+            }
+            .bando{
+                margin-left: 10px;
+                font-size: 9px;
+            }
+            .checked {
+                color: #ffd700; 
+                margin-left: 7px;
+                
+            }
+            .unchecked {
+                color: #fcfdfd;
+            }
+            .sta {
+                font-size: 13px;
+            }
+            
+
+            .download-btn {
+                
+                margin-bottom: 30px; /* Adjust the bottom spacing as needed */
+                margin-left: 15px; /* Adjust the left spacing as needed */
+                margin-top: 25px;
+                text-decoration: none;
+                background-color: #050505;
+                color: white;
+                font-size: 11px;
+                font-family: Arial ;
+                padding: 3px 10px;
+                border-radius: 15px;
+                display: inline-flex;
+            }
+            .flexybox-item {
+            width: 380px;
+            margin: 15px;
+            background-color: rgba(236, 234, 234, 0.774);
+            overflow: hidden; /* Hide overflow content (image) */
+            height: 250px;
+            }
+
+            /* Image styling */
+            .flexybox-item img {
+                width: 40%; /* Make the image fill the container */
+                height: 90px; /* Maintain aspect ratio */
+                border-radius: 50%;
+                margin-left: 85px;
+                margin-bottom: 5px;
+                
+            }
+
+            /* Common styling for card content */
+            .stuff-1, .stuff-2, .stuff-3 {
+                min-height: 150px;
+                padding: 40px;
+                
+            }
+
+            /* Additional styling for title and content */
+            h2 {
+                margin: 5px 0;
+                font-size: 20px;
+            }
+            p {
+                margin: 3px ;
+                font-size: 14px;
+                
+                
+            }
+            .footer-logo {
+            font-size: 30px;
+            margin-top: 5px;
+        
+            }
+
+            .footer-logo img {
+                width: 80px;
+                height: 90px;
+            }
+
+            .tyyfoot {
+                font-size: 25px;
+                margin-bottom: 4px;
+            }
+
+            .contact-info {
+                
+                margin-left: 20px; /* Adjust the margin-left as needed */
+            }
+
+            .info-row {
+                margin-bottom: 5px;
+                font-size: 13px;
+            }
+
+            .social-icons a {
+                color: #fff;
+                margin: 0 10px;
+                text-decoration: none;
+                font-size: 25px;  
+
+            }
+
+            .social-icons {
+            margin-top: -7%;
+            margin-left: 65%;
+            }
+
+            }
+
+    </style>
+</head>
+<body>
+    <div id="wrapper-div">
+
+            <nav class="navbar"> 
+                <div class="navdiv"> 
+                    
+                    <div class="logo"><a href="index.html">Numeral</a></div>
+                    <ul>
+                         
+                        <li class="hideOnMobile"><a href="index.html">Home</a></li>
+                        <li class="hideOnMobile"><a href="product.html">Products</a></li>
+                        <li class="hideOnMobile"><a href="blog.html">Blog</a></li>
+                        <li class="hideOnMobile"><a href="about.html">About</a></li>
+                        <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+                        <li class="menu-button" onclick=showSideba()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+                    </ul>
+                    <ul class="sideba">
+                        <li onclick=hideSideba()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a> 
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul> 
+                </div>
+            </nav>
+
+
+            <div id="header-banner-div">
+                <div class="slideshow-container">
+                    <div class="mySlides">
+                        <img src="Numeral4.jpg" alt="Slide 1">
+                        <div class="overlay"></div>
+                        <div class="wev-div">Weaver</div>
+                        <div class="subtext">Crafting dreams with threads</div>
+                    </div>
+                
+                    <div class="mySlides">
+                        <img src="Numeral5.jpg" alt="Slide 2">
+                        <div class="overlay"></div>
+                        <div class="wev-div">Weaver</div>
+                        <div class="subtext">Artistry in every intricate stitch.</div>
+                    </div>
+                
+                    <div class="mySlides">
+                        <img src="Numeral6.jpg" alt="Slide 3">
+                        <div class="overlay"></div>
+                        <div class="wev-div">Weaver</div>
+                        <div class="subtext">Where creativity meets fabric</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-div">
+                <div class="flexbox-stuff sidebar-div"></div>
+                
+                <div class="flexbox-stuff bodyarea-div">
+                    <div class="min-title">About Us</div>
+                    <div class="paragraph-div">
+                        <p>At Numeral, we believe that every innovation, breakthrough, leap forward in 
+                        technology is driven by one constant: numbers. Numbers shape our World.                   
+                        Our team at Numeral is a diverse blend of visionaries, data scientists, engineers, and dreamers,
+                        united by a common purpose - to harness the power of numbers to build better future.                   
+                        We are pioneers in the world of data analytics, artificial intelligence, and digital transformation.
+                        Our mission? To turn complex data into actionable insights.
+                        </p>
+                        <a href="#" class="readmore-btn">Read more </a>
+                    </div>
+        
+                </div>
+                
+            </div>
+               <div class="TyTo">Products</div>
+                 <!--card containers-->
+               <div class="flexbox-container">  
+                                <!-- First card container -->
+                    <div class="flexbox-item flexbox-item-1">
+                        <img src="Numeral11.jpg" alt="Image 1">
+                        <h3>Spotify</h3>
+                        <div class="bando"> 
+                        <p>25Mb</p>
+                        </div>
+                        <div class="sta"> 
+                            <span class="fa fa-star fa checked"></span>
+                            <span class="fa fa-star fa checked"></span>
+                            <span class="fa fa-star fa checked"></span>
+                            <span class="fa fa-star fa unchecked"></span>
+                       </div>
+                        <a href="#" class="download-btn">Download</a>
+                    </div>
+
+                    <!-- Second card container -->
+                    <div class="flexbox-item flexbox-item-2">
+                        <img src="Numeral12.jpg" alt="Image 2">
+                        <h3>Apple</h3>
+                        <div class="bando"> 
+                        <p>25Mb</p>
+                        </div>
+                        <div class="sta"> 
+                            <span class="fa fa-star fa checked"></span>
+                            <span class="fa fa-star fa checked"></span>
+                            <span class="fa fa-star fa checked"></span>
+                            <span class="fa fa-star fa unchecked"></span>
+                       </div>
+                        <a href="#" class="download-btn">Download</a>
+                    </div>
+
+                    <!-- Third card container -->
+                    <div class="flexbox-item flexbox-item-3">
+                        <img src="Numeral13.jpg" alt="Image 3">
+                        <h3>Tesla</h3>
+                        <div class="bando">
+                        <p>25Mb</p>
+                        </div>
+                        <div class="sta"> 
+                            <span class="fa fa-star fa checked"></span>
+                            <span class="fa fa-star fa checked"></span>
+                            <span class="fa fa-star fa checked"></span>
+                            <span class="fa fa-star fa unchecked"></span>
+                       </div>
+                        <a href="#" class="download-btn">Download</a>
+                    </div>
+
+                    <!-- Fourth card container -->
+                    <div class="flexbox-item flexbox-item-4">
+                        <img src="Numeral14.jpg" alt="Image 4">
+                        <h3>Bitcoin</h3>
+                        <div class="bando"> 
+                        <p>25Mb</p>
+                        </div>
+                        <div class="sta"> 
+                            <span class="fa fa-star fa checked"></span>
+                            <span class="fa fa-star fa checked"></span>
+                            <span class="fa fa-star fa checked"></span>
+                            <span class="fa fa-star fa unchecked"></span>
+                       </div>
+                        <a href="#" class="download-btn">Download</a>
+                    </div>
+                     <div class="arrow-circle">
+                        <span class="material-symbols-outlined">  
+                                arrow_forward
+                        </span>
+                      </div>
+                </div> 
+            <div class="Yuza">User Experience</div>
+             
+
+            <div class="Kontainer">
+                <!-- Card 1 -->
+                <div class="flexybox-item stuff-1">
+                    <img src="Numeral16.jpg" alt="Card 1 Image">
+                    <h2>Daisy</h2>
+                    <p>"The seamless integration with other apps makes
+                        my workflow so much smoother.
+                       I love how everything works together seamlessly"
+                       
+                    </p>
+                </div>
+            
+                <!-- Card 2 -->
+                <div class="flexybox-item stuff-2">
+                    <img src="Numeral17.jpg" alt="Card 2 Image">
+                    <h2>Maurene</h2>
+                    <p>"I absolutely love this app!
+                       It has made my life so much
+                       easier, and the user interface is fantastic.
+                       Great job!"
+                    </p>
+                </div>
+            
+                <!-- Card 3 -->
+                <div class="flexybox-item stuff-3">
+                    <img src="Numeral15.jpg" alt="Card 3 Image">
+                    <h2>Venessa</h2>
+                    <p>"I am genuinely impressed!. The user-friendly interface
+                        makes navigation a breeze, and the features are not 
+                        only practical but also innovative."
+                    </p>
+                </div>
+            </div>
+                  
+
+            <a href="#" class="feedback-btn">Feedback</a>
+
+    
+  <ol></ol>
+
+   
+   </div> 
+   <footer class="site-footer">
+        <div class="footer-logo">
+            <img src="Numeral29.jpg" alt="Numeral">
+        </div>
+        <div class="contact-info">
+            <div class="tyyfoot">Contact Info</div>
+            <div class="info-row">Phone: +1 123 456 789</div>
+            <div class="info-row">Email: info@numeral001.com</div>
+            <div class="info-row">Address: 123 Main Street, City</div>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+   </footer>
+
+ 
+
+<script>
+    function showSideba(){
+        const sideba = document.querySelector('.sideba')
+        sideba.style.display = 'flex'
+    }
+    function hideSideba(){
+        const sideba = document.querySelector('.sideba')
+        sideba.style.display = 'none'
+    }
+
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        const slides = document.getElementsByClassName("mySlides");
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        slideIndex++;
+
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+
+        setTimeout(showSlides, 5000); // Change slide every 5 seconds
+    }
+</script> 
+</body>
+</html>
